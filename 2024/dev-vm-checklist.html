@@ -7,7 +7,11 @@
     <p>For cleaning up a typical Ubuntu 20.04 / 22.04 install.</p>
     <ol>
       <li>Tell Ubuntu to ignore system errors and updates. (There is always at least one)
-      <li><pre>sudo apt-get remove bluez bluez-cups bluez-obexd cups cups-common libreoffice-base-core libreoffice-common openvpn python3-update-manager thunderbird ubuntu-release-upgrader-core vim-common</pre>
+      <li><pre>sudo apt-get remove \
+        bluez bluez-cups bluez-obexd \
+        cups cups-common \
+        libreoffice-base-core libreoffice-common \
+        openvpn python3-update-manager thunderbird ubuntu-release-upgrader-core vim-common</pre>
       <li><pre>sudo apt-get autoremove</pre>
       <li><pre>sudo apt-get update && sudo apt-get upgrade</pre>
       <li><pre>sudo apt-get install curl git kate pkg-config</pre>
@@ -16,6 +20,7 @@
       <li><pre>ssh-keygen -t ed25519</pre>
       <li><pre>mkdir -p ~/projects/2024</pre>
       <li><a href="https://v2.tauri.app/start/prerequisites/">Tauri v2 pre-requisites</a>
+      <li>In Kate, set "Show whitespace indicators" to "Always", under "Scrollbars", set "Show marks", in "Text Navigation", set "Allow scrolling past the end of the document"</li>
     </ol>
   </body>
 </html>
