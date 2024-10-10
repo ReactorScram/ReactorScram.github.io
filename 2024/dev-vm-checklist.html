@@ -12,7 +12,7 @@
       <li>Tell Ubuntu to ignore system errors and updates. (There is always at least one)
       <li><pre>sudo apt-get remove \
     bluez bluez-cups bluez-obexd \
-    cups cups-common \
+    cups cups-common docker.io \
     libreoffice-base-core libreoffice-common \
     openvpn python3-update-manager \
     thunderbird ubuntu-release-upgrader-core vim-common</pre>
@@ -24,6 +24,7 @@
       <li><pre>mkdir -p ~/projects/2024</pre>
       <li><a href="https://v2.tauri.app/start/prerequisites/">Tauri v2 pre-requisites</a>
       <li><a href="https://pnpm.io/installation">Install PNPM</a>
+      <li><pre>sudo usermod -aG docker $USER</pre>
       <li>In Kate, set "Show whitespace indicators" to "Always", under "Scrollbars", set "Show marks", in "Text Navigation", set "Allow scrolling past the end of the document"</li>
     </ol>
   </body>
