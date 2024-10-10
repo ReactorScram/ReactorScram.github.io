@@ -4,9 +4,10 @@
     <title>Dev VM checklist</title>
   </head>
   <body>
+    <p>For cleaning up a typical Ubuntu 20.04 / 22.04 install.</p>
     <ol>
       <li>Tell Ubuntu to ignore system errors and updates. (There is always at least one)
-      <li><pre>sudo apt-get remove thunderbird libreoffice-base-core libreoffice-common openvpn</pre>
+      <li><pre>sudo apt-get remove bluez bluez-cups bluez-obexd libreoffice-base-core libreoffice-common openvpn python3-update-manager thunderbird ubuntu-release-upgrader-core vim-common</pre>
       <li><pre>sudo apt-get autoremove</pre>
       <li><pre>sudo apt-get update && sudo apt-get upgrade</pre>
       <li><pre>sudo apt-get install curl git kate pkg-config</pre>
