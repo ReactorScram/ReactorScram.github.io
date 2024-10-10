@@ -1,0 +1,50 @@
+/* Give fun colors to hyperlinks to work in dark mode. */
+a {
+    color: cyan;
+}
+a:visited {
+    color: magenta;
+}
+blockquote {
+    background: #202020;
+    margin: 0;
+    padding: 10px;
+}
+body {
+    /* Dark mode, ignore low-contrast advice from people with expensive screens */
+    background:#000000;
+    color:#ffffff;
+    
+    /* I personally like sans */
+    font-family: sans-serif;
+    
+    /* This all helps with accessibility to some extent */
+    font-size: 125%;
+    line-height: 1.5;
+    max-width: 960px;
+}
+/* Style pre blocks and individual lines of code */
+code,pre {
+    background: #202020;
+    border: #808080 solid 1px;
+    padding: 8px;
+    overflow: auto;
+}
+/* Un-style code _inside_ pre blocks. Needed to deal with a bug. */
+pre code {
+    background: none;
+    border: none;
+}
+img {
+    border: #808080 solid 1px;
+    /* Reduces the gap between images and text */
+    vertical-align: bottom;
+    
+    /* Shrink if it's too big for the screen */
+    max-width: 100%;
+    height: auto;
+}
+.faint {
+    color: #808080;
+    font-size: 90%;
+}
