@@ -5,15 +5,16 @@
   </head>
   <body>
     <ol>
-      <li>Tell Ubuntu to ignore system errors and updates. (There is always at least one)</li>
-      <li><pre>sudo apt-get remove thunderbird libreoffice-base-core</pre>
-      <li><pre>sudo apt-get update</pre></li>
-      <li><pre>sudo apt-get install curl git kate pkg-config</pre></li>
-      <li><pre>curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh</pre></li>
-      <li><pre>. ~/.cargo/env</pre></li>
-      <li><pre>ssh-keygen -t ed25519</pre></li>
-      <li><pre>mkdir -p ~/projects/2024</pre></li>
-      <li><a href="https://v2.tauri.app/start/prerequisites/">Tauri v2 pre-requisites</a></li>
+      <li>Tell Ubuntu to ignore system errors and updates. (There is always at least one)
+      <li><pre>sudo apt-get remove thunderbird libreoffice-base-core libreoffice-common openvpn</pre>
+      <li><pre>sudo apt-get autoremove</pre>
+      <li><pre>sudo apt-get update && sudo apt-get upgrade</pre>
+      <li><pre>sudo apt-get install curl git kate pkg-config</pre>
+      <li><pre>curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh</pre>
+      <li><pre>. ~/.cargo/env</pre>
+      <li><pre>ssh-keygen -t ed25519</pre>
+      <li><pre>mkdir -p ~/projects/2024</pre>
+      <li><a href="https://v2.tauri.app/start/prerequisites/">Tauri v2 pre-requisites</a>
     </ol>
   </body>
 </html>
