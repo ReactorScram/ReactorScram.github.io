@@ -1,31 +1,58 @@
 <html>
-  <head>
-    <link rel="stylesheet" href="../style.css">
-    <title>Dev VM Checklist</title>
-  </head>
-  <body>
-    <a href="../index.html">Index</a>
-    <p>2024 Oct 10</p>
-    <p>Dev VM Checklist
-    <p>For cleaning up a typical Ubuntu 20.04 / 22.04 install.</p>
-    <ol>
-      <li>Tell Ubuntu to ignore system errors and updates. (There is always at least one)
-      <li><pre>sudo apt-get remove \
-    bluez bluez-cups bluez-obexd \
-    cups cups-common docker.io \
-    libreoffice-base-core libreoffice-common \
-    openvpn python3-update-manager \
-    thunderbird ubuntu-release-upgrader-core vim-common</pre>
-      <li><pre>sudo apt-get autoremove</pre>
-      <li><pre>sudo apt-get update && sudo apt-get upgrade</pre>
-      <li><pre>sudo apt-get install curl git kate konsole pkg-config</pre>
-      <li><pre>curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh</pre>
-      <li><pre>ssh-keygen -t ed25519</pre>
-      <li><pre>mkdir -p ~/projects/2024</pre>
-      <li><a href="https://v2.tauri.app/start/prerequisites/">Tauri v2 pre-requisites</a>
-      <li><a href="https://pnpm.io/installation">Install PNPM</a>
-      <li><pre>sudo usermod -aG docker $USER</pre>
-      <li>In Kate, set "Show whitespace indicators" to "Always", under "Scrollbars", set "Show marks", in "Text Navigation", set "Allow scrolling past the end of the document"</li>
-    </ol>
-  </body>
-</html>
+<head>
+  <link rel="stylesheet" href="../style.css">
+  <title>Dev VM Checklist</title>
+</head>
+<body>
+<p><a href="../index.html">Index</a></p>
+<p>Created 2024 Oct 10, updated Oct 15</p>
+<p><strong>Dev VM Checklist</strong></p>
+<p>For cleaning up a typical Ubuntu 20.04 / 22.04 install.</p>
+<ol>
+<li>Tell Ubuntu to ignore system errors and updates. (There is always at
+least one)</li>
+<li>
+<pre><code class="language-bash"></code></pre>
+</li>
+</ol>
+<p>sudo apt-get remove <br />
+bluez bluez-cups bluez-obexd <br />
+cups cups-common docker.io <br />
+libreoffice-base-core libreoffice-common <br />
+openvpn python3-update-manager <br />
+thunderbird ubuntu-release-upgrader-core vim-common</p>
+<pre><code>3. `sudo apt-get autoremove`
+4. `sudo apt-get update &amp;&amp; sudo apt-get upgrade`
+5. `sudo apt-get install curl git kate konsole pkg-config`
+6. `curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh`
+7. `ssh-keygen -t ed25519`
+8. Set up `~/.gitconfig`
+```ini
+[gpg]
+    format = ssh
+[pull]
+    rebase = false
+[advice]
+    diverging = false
+[gpg "ssh"]
+    allowedSignersFile = /home/user/.config/git/allowed_ssh_signers
+</code></pre>
+<ol start="9">
+<li>Set up <code>~/.config/git/allowed_ssh_signers</code> =
+<code>/home/user/.ssh/id_ed25519.pub</code></li>
+<li>In repos that need signed commits, run ```bash
+git config commit.gpgsign true
+git config user.signingkey /home/user/.ssh/id_ed25519.pub
+git config user.email ReactorScram@users.noreply.github.com
+git config user.name "Not Applicable"</li>
+</ol>
+<pre><code>11. `mkdir -p ~/projects/2024`
+12. [Tauri v2 pre-requisites](https://v2.tauri.app/start/prerequisites/)
+13. [Install PNPM](https://pnpm.io/installation)
+14. `sudo usermod -aG docker $USER`
+15. In Kate, set "Show whitespace indicators" to "Always", under 
+"Scrollbars", set "Show marks", in "Text Navigation", set "Allow scrolling past the end of the document"
+
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
